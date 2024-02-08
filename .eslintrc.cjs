@@ -54,12 +54,6 @@ module.exports = {
     'no-console': [
       'warn',
     ],
-    'max-len': [
-      'error',
-      {
-        'code': 120,
-      },
-    ],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
   },
