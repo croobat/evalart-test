@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <header className="sticky top-0">
+    <header className="sticky">
       <p>hey im a navbar</p>
     </header>
   );

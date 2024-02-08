@@ -11,11 +11,9 @@ function App() {
   const [hideHeader, setHideHeader] = useState(false);
 
   useEffect(() => {
-    // Implement scroll listener to toggle hideHeader state
+    // hide header on scroll
     const handleScroll = () => {
-      // Logic to determine whether to hide the header on scroll
-      // Update hideHeader state accordingly
-      const currentScrollPos = window.scrollY;
+      const currentScrollPos = window.pageYOffset;
       if (currentScrollPos > 100) {
         setHideHeader(true);
       }
@@ -33,8 +31,11 @@ function App() {
 
   return (
     <div>
-      <Header hide={hideHeader} />
-      <Navbar />
+      <div className={'sticky top-0 z-50 bg-white shadow-lg transition-transform duration-300 transform '
+        + (hideHeader ? '-translate-y-20' : 'translate-y-0')}>
+        <Header hide={hideHeader} />
+        <Navbar />
+      </div>
       <Body />
       <Footer />
     </div>
