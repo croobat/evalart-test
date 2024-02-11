@@ -1,6 +1,6 @@
 import Block from './Block';
 
-function BlockList() {
+const BlockList = () => {
   // Define block data
   const blocks = [
     {
@@ -27,6 +27,6 @@ function BlockList() {
       ))}
     </div>
   );
-}
+};
 
 export default BlockList;

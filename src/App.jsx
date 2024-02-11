@@ -7,13 +7,13 @@ import Footer from './components/Footer';
 
 import './App.css';
 
-function App() {
+const App = () => {
   const [hideHeader, setHideHeader] = useState(false);
 
   useEffect(() => {
     // hide header on scroll
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
       if (currentScrollPos > 100) {
         setHideHeader(true);
       }
@@ -40,6 +40,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

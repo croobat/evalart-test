@@ -5,27 +5,27 @@ import { faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { faSquareFacebook, faSquareTwitter, faLinkedin, faInstagram, faSquareGooglePlus } from '@fortawesome/free-brands-svg-icons';
 
-function SectionContainer({ children }) {
+const SectionContainer = ({ children }) => {
   return <section className="flex items-center mr-2 pr-2 border-r border-blue-600 justify-center">{children}</section>;
-}
+};
 
 SectionContainer.propTypes = {
   children: PropTypes.node,
 };
 
-function IconContainer({ icon }) {
+const IconContainer = ({ icon }) => {
   return (
     <div className="px-2 py-1 text-white bg-blue-800">
       <FaIcon icon={icon} size="lg" />
     </div>
   );
-}
+};
 
 IconContainer.propTypes = {
   icon: PropTypes.object,
 };
 
-function Header({ hide }) {
+const Header = ({ hide }) => {
   const LANGUAGES = [
     { value: 'en', label: 'English' },
     { value: 'es', label: 'Español' },
@@ -65,7 +65,7 @@ function Header({ hide }) {
       </div>
     </header>
   );
-}
+};
 
 Header.propTypes = {
   hide: PropTypes.bool,

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Block({ image, title, content }) {
+const Block = ({ image, title, content }) => {
   return (
     <div>
       <h1>{title}</h1>
@@ -8,7 +8,7 @@ function Block({ image, title, content }) {
       <p>{content}</p>
     </div>
   );
-}
+};
 
 Block.propTypes = {
   image: PropTypes.string,
