@@ -12,15 +12,21 @@ const App = () => {
 
   useEffect(() => {
     // hide header on scroll
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      if (currentScrollPos > 100) {
-        setHideHeader(true);
-      }
-      else {
-        setHideHeader(false);
-      }
-    };
+    const handleScroll = (() => {
+      let timeout;
+
+      return () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          const currentScrollPos = window.scrollY;
+          if (currentScrollPos > 100) {
+            setHideHeader(true);
+          } else {
+            setHideHeader(false);
+          }
+        }, 100);
+      };
+    })();
 
     window.addEventListener('scroll', handleScroll);
 
