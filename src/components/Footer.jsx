@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="bg-blue-950">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:grid-cols-2 text-white pt-6 px-4 max-w-6xl mx-auto">
             {Object.entries(sections).map(([sectionName, sectionLinks], index) => (
-              <div key={index} className="sm:shadow-[rgba(0,0,15,0.2)_10px_0px_4px_0px] justify-evenly max-w-6xl mx-auto">
+              <div key={index} className="sm:shadow-[rgba(0,0,15,0.2)_10px_0px_4px_0px] justify-evenly max-w-6xl">
                 <h3 className="text-lg font-bold mb-2">{sectionName.toUpperCase()}</h3>
                 {sectionLinks.map((link, linkIndex) => (
                   <div key={linkIndex} className="flex items-center mb-2">
