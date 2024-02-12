@@ -5,7 +5,7 @@ const Banner = ({ bgColor, title, image }) => {
     <div>
       <div className={`bg-${bgColor} text-white text-center py-20`}>
         {image && <img src={image} alt="banner" className="mx-auto mb-5" />}
-        <h1 className="text-2xl font-bold">{title}</h1>
+        <h1 className="text-xl font-bold">{title}</h1>
       </div>
     </div>
   );
