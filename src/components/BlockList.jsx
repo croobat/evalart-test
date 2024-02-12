@@ -1,7 +1,6 @@
 import Block from './Block';
 
 const BlockList = () => {
-  // Define block data
   const blocks = [
     {
       image: 'https://via.placeholder.com/60',
@@ -37,15 +36,17 @@ const BlockList = () => {
 
   return (
     <div className="pb-20 bg-gray-200">
-      {blocks.map((block, index) => (
-        <Block
-          key={index}
-          image={block.image}
-          title={block.title}
-          subtitle={block.subtitle}
-          content={block.content}
-        />
-      ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 items-start">
+        {blocks.map((block, index) => (
+          <Block
+            key={index}
+            image={block.image}
+            title={block.title}
+            subtitle={block.subtitle}
+            content={block.content}
+          />
+        ))}
+      </div>
     </div>
   );
 };

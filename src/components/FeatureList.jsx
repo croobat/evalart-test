@@ -68,9 +68,11 @@ const FeatureList = () => {
 
   return (
     <div className="pb-20 bg-gray-300">
-      {features.slice(startIndex, endIndex).map((feature, index) => (
-        <Feature key={index} image={feature.image} title={feature.title} content={feature.content} />
-      ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 p-4">
+        {features.slice(startIndex, endIndex).map((feature, index) => (
+          <Feature key={index} image={feature.image} title={feature.title} content={feature.content} />
+        ))}
+      </div>
 
       <div className=" absolute w-full text-center flex flex-col items-center bg-gray-300 pb-4">
         <button

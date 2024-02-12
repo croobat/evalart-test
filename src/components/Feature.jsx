@@ -7,7 +7,7 @@ const Feature = ({ image, title, content }) => {
         <img src={image} alt={title} className="rounded-md opacity-80" />
         <div className="absolute">
           <h1 className="text-xl font-bold text-center text-blue-800">{title}</h1>
-          <p className="mt-2 mx-4 text-center text-gray-600">{content}</p>
+          <p className="mt-2 mx-4 text-center text-gray-600 max-w-72">{content}</p>
         </div>
       </div>
     </div>

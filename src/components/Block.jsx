@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Block = ({ image, title, subtitle, content }) => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 md:px-12 bg-gray-200">
+    <div className="flex flex-col items-center justify-start px-4 md:px-12 bg-gray-200 md:shadow-lg pb-4 h-full">
       <div className="flex flex-col items-center">
         <img src={image} alt={title} className="relative top-20" />
         <img className="rounded-md" src={'http://cdn.evalart.com/wp-content/themes/twentyfourteen-child/images/find_Best_bg.png'} />
