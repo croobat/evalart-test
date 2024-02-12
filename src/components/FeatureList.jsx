@@ -68,7 +68,7 @@ const FeatureList = () => {
 
   return (
     <div className="pb-20 bg-gray-300">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 p-4 max-w-6xl mx-auto">
         {features.slice(startIndex, endIndex).map((feature, index) => (
           <Feature key={index} image={feature.image} title={feature.title} content={feature.content} />
         ))}

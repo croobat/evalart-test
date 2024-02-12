@@ -36,7 +36,7 @@ const BlockList = () => {
 
   return (
     <div className="pb-20 bg-gray-200">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 items-start max-w-6xl mx-auto">
         {blocks.map((block, index) => (
           <Block
             key={index}
