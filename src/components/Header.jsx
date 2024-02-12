@@ -25,14 +25,14 @@ IconContainer.propTypes = {
   icon: PropTypes.object,
 };
 
-const Header = ({ hide }) => {
+const Header = () => {
   const LANGUAGES = [
     { value: 'en', label: 'English' },
     { value: 'es', label: 'Español' },
   ];
 
   return (
-    <header className={hide ? 'hidden' : 'visible'}>
+    <header>
       <div className="flex flex-col items-center justify-center p-2 text-white bg-blue-800 font-medium">
         <select className="bg-blue-800 text-white border border-white align-middle m-2 px-2 text-sm">
           {LANGUAGES.map((lang) => (
@@ -65,10 +65,6 @@ const Header = ({ hide }) => {
       </div>
     </header>
   );
-};
-
-Header.propTypes = {
-  hide: PropTypes.bool,
 };
 
 export default Header;
