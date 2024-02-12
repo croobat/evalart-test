@@ -36,7 +36,7 @@ const BlockList = () => {
   ];
 
   return (
-    <div>
+    <div className="pb-20 bg-gray-200">
       {blocks.map((block, index) => (
         <Block
           key={index}
