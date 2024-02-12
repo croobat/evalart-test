@@ -67,12 +67,12 @@ const FeatureList = () => {
   const endIndex = Math.min(startIndex + 3, features.length);
 
   return (
-    <div className="mb-20">
+    <div className="pb-20 bg-gray-300">
       {features.slice(startIndex, endIndex).map((feature, index) => (
         <Feature key={index} image={feature.image} title={feature.title} content={feature.content} />
       ))}
 
-      <div className=" absolute w-full text-center flex flex-col items-center bg-gray-200 pb-4">
+      <div className=" absolute w-full text-center flex flex-col items-center bg-gray-300 pb-4">
         <button
           onClick={nextSlide}
           disabled={endIndex === features.length}>
