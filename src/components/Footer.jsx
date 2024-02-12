@@ -1,3 +1,6 @@
+import { FontAwesomeIcon as FaIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+
 const Footer = () => {
   const sections = {
     support: ['User Guide', 'FAQ', 'Contact Us'],
@@ -21,12 +24,15 @@ const Footer = () => {
     <>
       <footer>
         {/* Responsive grid with sections */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:grid-cols-2 bg-blue-950 text-white py-6 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:grid-cols-2 bg-blue-950 text-white pt-6 px-4">
           {Object.entries(sections).map(([sectionName, sectionLinks], index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="sm:shadow-[rgba(0,0,15,0.2)_10px_0px_4px_0px]">
               <h3 className="text-lg font-bold mb-2">{sectionName.toUpperCase()}</h3>
               {sectionLinks.map((link, linkIndex) => (
-                <p key={linkIndex} className="text-xs uppercase">{link}</p>
+                <div key={linkIndex} className="flex items-center mb-2">
+                  <FaIcon icon={faCaretRight} color="white" className="mr-2" />
+                  <p key={linkIndex} className="text-xs uppercase">{link}</p>
+                </div>
               ))}
             </div>
           ))}

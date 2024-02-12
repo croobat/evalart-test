@@ -29,7 +29,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`flex justify-between items-center h-16 bg-white relative shadow-sm font-bold ${isSticky ? 'sticky top-0 z-50' : ''}`} role="navigation">
+    <nav className={`flex justify-between items-center h-16 bg-white relative shadow-lg font-bold ${isSticky ? 'sticky top-0 z-50' : ''}`} role="navigation">
       <div className="mx-4">
         <SvgLogo />
       </div>

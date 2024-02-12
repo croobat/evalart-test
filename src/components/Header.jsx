@@ -6,7 +6,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { faSquareFacebook, faSquareTwitter, faLinkedin, faInstagram, faSquareGooglePlus } from '@fortawesome/free-brands-svg-icons';
 
 const SectionContainer = ({ children }) => {
-  return <section className="flex items-center mr-2 pr-2 border-r border-blue-600 justify-center">{children}</section>;
+  return <section className={'flex items-center mr-2 pr-2 sm:border-r border-blue-600 justify-center'}>{children}</section>;
 };
 
 SectionContainer.propTypes = {
